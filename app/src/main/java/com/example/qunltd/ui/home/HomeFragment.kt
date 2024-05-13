@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.qunltd.R
 import com.example.qunltd.databinding.FragmentHomeBinding
+import com.example.qunltd.model.HomeModel
 
 class HomeFragment : Fragment() {
 
@@ -25,7 +26,14 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
-
+            rvHome.adapter = HomeAdapter(
+                listOf(
+                    HomeModel("Quản lý đơn hàng", R.drawable.account_box_outline, 2),
+                    HomeModel("Quản lý đơn hàng", R.drawable.account_box_outline, 1),
+                    HomeModel("Quản lý đơn hàng", R.drawable.account_box_outline, 2),
+                    HomeModel("Quản lý đơn hàng", R.drawable.account_box_outline, 4),
+                )
+            )
         }
     }
 }
