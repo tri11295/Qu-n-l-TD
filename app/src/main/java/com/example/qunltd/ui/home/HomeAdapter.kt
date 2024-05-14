@@ -9,7 +9,7 @@ import com.example.qunltd.databinding.ItemHomeBinding
 import com.example.qunltd.extension.visibleIf
 import com.example.qunltd.model.HomeModel
 
-class HomeAdapter(private val list: List<HomeModel>) :
+class HomeAdapter(private val list: List<HomeModel>, private val onClick: () -> Unit) :
     RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
     inner class HomeViewHolder(private val binding: ItemHomeBinding) :
@@ -17,6 +17,9 @@ class HomeAdapter(private val list: List<HomeModel>) :
         @SuppressLint("StringFormatMatches")
         fun bind(item: HomeModel) {
             with(binding) {
+                root.setOnClickListener {
+                    onClick.invoke()
+                }
                 ivSetting.setImageResource(item.icon)
                 tvName.text = item.name
                 tvNotification.text = binding.root.context.getString(

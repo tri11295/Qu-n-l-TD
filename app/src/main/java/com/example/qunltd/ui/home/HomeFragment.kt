@@ -29,11 +29,13 @@ class HomeFragment : Fragment() {
             rvHome.adapter = HomeAdapter(
                 listOf(
                     HomeModel("Quản lý đơn hàng", R.drawable.account_box_outline, 2),
-                    HomeModel("Quản lý đơn hàng", R.drawable.account_box_outline, 1),
-                    HomeModel("Quản lý đơn hàng", R.drawable.account_box_outline, 2),
-                    HomeModel("Quản lý đơn hàng", R.drawable.account_box_outline, 4),
+                    HomeModel("Xuất hàng", R.drawable.account_box_outline, 1),
+                    HomeModel("Nhập hàng", R.drawable.account_box_outline, 2),
+                    HomeModel("Tồn kho", R.drawable.account_box_outline, 4),
                 )
-            )
+            ) {
+                findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment())
+            }
         }
     }
 }
