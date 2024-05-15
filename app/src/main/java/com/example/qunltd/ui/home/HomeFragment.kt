@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
                     HomeModel("Tồn kho", R.drawable.account_box_outline, 4),
                 )
             ) {
-                findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment())
+                findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToListProductFragment())
             }
         }
     }

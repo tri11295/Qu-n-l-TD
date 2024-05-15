@@ -6,18 +6,18 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.example.qunltd.ui.detail.DetailFragment"
+        android:id="@+id/listProductFragment"
+        android:name="com.example.qunltd.ui.listProduct.ListProductFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_list_product" />
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.qunltd.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_homeFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            android:id="@+id/action_homeFragment_to_listProductFragment"
+            app:destination="@id/listProductFragment" />
     </fragment>
 </navigation>
