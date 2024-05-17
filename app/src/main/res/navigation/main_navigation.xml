@@ -19,5 +19,13 @@
         <action
             android:id="@+id/action_homeFragment_to_listProductFragment"
             app:destination="@id/listProductFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sellFragment"
+            app:destination="@id/sellFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/sellFragment"
+        android:name="com.example.qunltd.ui.sell.SellFragment"
+        android:label="fragment_sell"
+        tools:layout="@layout/fragment_sell" />
 </navigation>

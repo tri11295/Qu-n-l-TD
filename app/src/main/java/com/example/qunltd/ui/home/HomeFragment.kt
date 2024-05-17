@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.qunltd.R
 import com.example.qunltd.databinding.FragmentHomeBinding
 import com.example.qunltd.model.HomeModel
+import com.example.qunltd.model.HomeTab
 
 class HomeFragment : Fragment() {
 
@@ -28,13 +29,17 @@ class HomeFragment : Fragment() {
         with(binding) {
             rvHome.adapter = HomeAdapter(
                 listOf(
-                    HomeModel("Quản lý đơn hàng", R.drawable.account_box_outline, 2),
-                    HomeModel("Xuất hàng", R.drawable.account_box_outline, 1),
-                    HomeModel("Nhập hàng", R.drawable.account_box_outline, 2),
-                    HomeModel("Tồn kho", R.drawable.account_box_outline, 4),
+                    HomeModel(HomeTab.LIST.nameTab, R.drawable.account_box_outline, 2),
+                    HomeModel(HomeTab.RECEIPT.nameTab, R.drawable.account_box_outline, 1),
+                    HomeModel(HomeTab.SELL.nameTab, R.drawable.account_box_outline, 2),
+                    HomeModel(HomeTab.OTHER.nameTab, R.drawable.account_box_outline, 4),
                 )
             ) {
-                findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToListProductFragment())
+                when(it){
+                    HomeTab.LIST.nameTab -> findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToListProductFragment())
+                    else -> findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSellFragment())
+                }
+
             }
         }
     }
