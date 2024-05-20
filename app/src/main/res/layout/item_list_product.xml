@@ -4,7 +4,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp">
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="4dp"
+        android:background="@drawable/bg_product"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvName"
@@ -13,113 +18,50 @@
             android:fontFamily="@font/proximanova_sbold"
             android:text="Vở thiên long"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/proximanova_reg"
-            android:text="Giá nhập"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvName" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvPriceBuy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/proximanova_reg"
-            android:text="100.000"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/tvText1"
-            app:layout_constraintTop_toBottomOf="@+id/tvText1" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:fontFamily="@font/proximanova_reg"
-            android:text="Giá bán"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toStartOf="@+id/tvText3"
-            app:layout_constraintStart_toEndOf="@+id/tvText1"
-            app:layout_constraintTop_toTopOf="@+id/tvText1" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvPriceSell"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/proximanova_reg"
-            android:text="100.000"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/tvText2"
-            app:layout_constraintTop_toBottomOf="@+id/tvText2" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvText4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/proximanova_reg"
-            android:text="Đơn vị"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvText1" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvUnit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/proximanova_reg"
-            android:text="Thùng"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvText4"
-            app:layout_constraintTop_toBottomOf="@+id/tvText4" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/proximanova_reg"
-            android:text="Số lượng"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toStartOf="@+id/tvText4"
-            app:layout_constraintStart_toEndOf="@+id/tvText2"
-            app:layout_constraintTop_toTopOf="@+id/tvText1" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:drawableStart="@drawable/ic_box"
+            android:drawablePadding="6dp"
             android:fontFamily="@font/proximanova_reg"
-            android:text="100"
-            android:textColor="@color/colorAccent"
+            android:text="Số lượng : 132 thùng"
+            android:textColor="@color/black"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/tvText3"
-            app:layout_constraintTop_toBottomOf="@+id/tvText3" />
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/santas_gray"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCashIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableStart="@drawable/ic_cash"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/proximanova_reg"
+            android:text="Giá nhâp : 1.000.000 / thùng"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintTop_toBottomOf="@+id/tvCount" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCashOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableStart="@drawable/ic_money"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/proximanova_reg"
+            android:text="Giá bán : 1.100.000 / thùng"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvCashIn" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

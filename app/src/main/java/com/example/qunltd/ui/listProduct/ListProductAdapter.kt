@@ -14,10 +14,9 @@ class ListProductAdapter(private val list: List<ProductModel>) :
         fun bind(item: ProductModel) {
             with(binding) {
                 tvName.text = item.name
-                tvPriceBuy.text = item.priceBuy
-                tvPriceSell.text = item.priceSell
-                tvCount.text = item.count.toString()
-                tvUnit.text = item.unit
+                tvCount.text = "Số lượng : ${item.count} / ${item.unit}"
+                tvCashIn.text= "Giá nhập : ${item.priceBuy} / ${item.unit}"
+                tvCashOut.text= "Giá nhập : ${item.priceSell} / ${item.unit}"
             }
         }
     }

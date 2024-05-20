@@ -27,19 +27,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
-            rvHome.adapter = HomeAdapter(
-                listOf(
-                    HomeModel(HomeTab.LIST.nameTab, R.drawable.account_box_outline, 2),
-                    HomeModel(HomeTab.RECEIPT.nameTab, R.drawable.account_box_outline, 1),
-                    HomeModel(HomeTab.SELL.nameTab, R.drawable.account_box_outline, 2),
-                    HomeModel(HomeTab.OTHER.nameTab, R.drawable.account_box_outline, 4),
-                )
-            ) {
-                when(it){
-                    HomeTab.LIST.nameTab -> findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToListProductFragment())
-                    else -> findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSellFragment())
-                }
-
+            homeList.root.setOnClickListener {
+                findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToListProductFragment())
+            }
+            homeSell.root.setOnClickListener {
+                findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSellFragment())
             }
         }
     }

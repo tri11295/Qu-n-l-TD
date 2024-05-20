@@ -5,12 +5,17 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_product"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -20,7 +25,7 @@
                 android:fontFamily="@font/proximanova_bold"
                 android:text="Ngày"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvDate"
                 app:layout_constraintStart_toStartOf="@+id/tvDate"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +37,7 @@
                 android:fontFamily="@font/proximanova_sbold"
                 android:text="16/05/2024"
                 android:textColor="@color/curious_blue"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTextDate" />
 
@@ -43,7 +48,7 @@
                 android:fontFamily="@font/proximanova_bold"
                 android:text="Tổng thu"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvSum"
                 app:layout_constraintStart_toStartOf="@+id/tvSum"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -55,37 +60,40 @@
                 android:fontFamily="@font/proximanova_sbold"
                 android:text="100.000.000"
                 android:textColor="@color/curious_blue"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/tvShow"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvTextCount"
                 app:layout_constraintStart_toEndOf="@+id/tvDate"
                 app:layout_constraintTop_toBottomOf="@+id/tvTextSum" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvShow"
+                android:id="@+id/tvTextCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableBottom="@drawable/ic_down"
                 android:fontFamily="@font/proximanova_bold"
-                android:text="Hiện đơn"
+                android:text="Số đơn"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 app:drawableTint="@color/curious_blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/cardview_dark_background"
-            app:layout_constraintBottom_toTopOf="@+id/rvSell" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/curious_blue"
+                android:textSize="20sp"
+                app:fontFamily="@font/proximanova_sbold"
+                app:layout_constraintEnd_toEndOf="@+id/tvTextCount"
+                app:layout_constraintStart_toStartOf="@+id/tvTextCount"
+                app:layout_constraintTop_toBottomOf="@+id/tvTextCount" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvSell"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
             tools:itemCount="4"

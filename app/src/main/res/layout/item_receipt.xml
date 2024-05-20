@@ -4,37 +4,64 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/bg_product"
+        android:elevation="4dp"
+        android:padding="6dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvNameCustomer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/proximanova_sbold"
-            android:text="Nhà sách Trường "
+            android:text="Nhà sách Trường An"
             android:textColor="@color/black"
-            android:textSize="22sp"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_box"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proximanova_reg"
+            android:text="10 sản phẩm"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameCustomer" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvSum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_cash"
+            android:drawablePadding="4dp"
             android:fontFamily="@font/proximanova_reg"
-            android:text="Tổng tiền : 100.000"
+            android:text="100.000"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNameCustomer" />
+            app:layout_constraintTop_toBottomOf="@+id/tvCount" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/cardview_dark_background"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_close"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proximanova_reg"
+            android:text="Đã giao - Nợ 500.000"
+            android:textColor="@color/rose_madder"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSum" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
