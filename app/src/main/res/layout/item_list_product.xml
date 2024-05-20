@@ -18,7 +18,7 @@
             android:fontFamily="@font/proximanova_sbold"
             android:text="Vở thiên long"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +32,7 @@
             android:fontFamily="@font/proximanova_reg"
             android:text="Số lượng : 132 thùng"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
@@ -46,7 +46,7 @@
             android:fontFamily="@font/proximanova_reg"
             android:text="Giá nhâp : 1.000.000 / thùng"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintTop_toBottomOf="@+id/tvCount" />
 
@@ -60,7 +60,7 @@
             android:fontFamily="@font/proximanova_reg"
             android:text="Giá bán : 1.100.000 / thùng"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintTop_toBottomOf="@+id/tvCashIn" />
     </androidx.constraintlayout.widget.ConstraintLayout>

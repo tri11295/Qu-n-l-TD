@@ -33,6 +33,9 @@ class HomeFragment : Fragment() {
             homeSell.root.setOnClickListener {
                 findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSellFragment())
             }
+            homeSum.root.setOnClickListener {
+                findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSumFragment())
+            }
         }
     }
 }

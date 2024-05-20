@@ -22,10 +22,17 @@
         <action
             android:id="@+id/action_homeFragment_to_sellFragment"
             app:destination="@id/sellFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sumFragment"
+            app:destination="@id/sumFragment" />
     </fragment>
     <fragment
         android:id="@+id/sellFragment"
         android:name="com.example.qunltd.ui.sell.SellFragment"
         android:label="fragment_sell"
         tools:layout="@layout/fragment_sell" />
+    <fragment
+        android:id="@+id/sumFragment"
+        android:name="com.example.qunltd.sum.SumFragment"
+        android:label="SumFragment" />
 </navigation>

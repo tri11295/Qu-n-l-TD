@@ -25,7 +25,7 @@
                 android:fontFamily="@font/proximanova_bold"
                 android:text="Ngày"
                 android:textColor="@color/black"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvDate"
                 app:layout_constraintStart_toStartOf="@+id/tvDate"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,7 @@
                 android:fontFamily="@font/proximanova_sbold"
                 android:text="16/05/2024"
                 android:textColor="@color/curious_blue"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTextDate" />
 
@@ -48,7 +48,7 @@
                 android:fontFamily="@font/proximanova_bold"
                 android:text="Tổng thu"
                 android:textColor="@color/black"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvSum"
                 app:layout_constraintStart_toStartOf="@+id/tvSum"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -60,7 +60,7 @@
                 android:fontFamily="@font/proximanova_sbold"
                 android:text="100.000.000"
                 android:textColor="@color/curious_blue"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/tvTextCount"
                 app:layout_constraintStart_toEndOf="@+id/tvDate"
                 app:layout_constraintTop_toBottomOf="@+id/tvTextSum" />
@@ -72,7 +72,7 @@
                 android:fontFamily="@font/proximanova_bold"
                 android:text="Số đơn"
                 android:textColor="@color/black"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 app:drawableTint="@color/curious_blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
