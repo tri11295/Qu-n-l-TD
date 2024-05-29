@@ -25,11 +25,12 @@ class ListProductFragment : Fragment() {
         with(binding) {
             rvProduct.adapter = ListProductAdapter(
                 listOf(
-                    ProductModel("Vở thuận tiến", "100.000", "110.000", 100, "Thùng"),
-                    ProductModel("Vở thuận tiến", "100.000", "110.000", 100, "Thùng"),
-                    ProductModel("Vở thuận tiến", "100.000", "110.000", 100, "Thùng"),
-                    ProductModel("Vở thuận tiến", "100.000", "110.000", 100, "Thùng"),
-                    ProductModel("Vở thuận tiến", "100.000", "110.000", 100, "Thùng"),
+                    ProductModel("Vở thuận tiến", 100000, 110000, 100, "Thùng"),
+                    ProductModel("Vở thuận tiến", 100000, 110000, 100, "Thùng"),
+                    ProductModel("Vở thuận tiến", 100000, 110000, 100, "Thùng"),
+                    ProductModel("Vở thuận tiến", 100000, 110000, 100, "Thùng"),
+                    ProductModel("Vở thuận tiến", 100000, 110000, 100, "Thùng"),
+                    ProductModel("Vở thuận tiến", 100000, 110000, 100, "Thùng"),
                 )
             )
         }

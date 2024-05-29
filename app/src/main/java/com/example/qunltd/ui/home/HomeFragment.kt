@@ -5,12 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
-import com.example.qunltd.R
 import com.example.qunltd.databinding.FragmentHomeBinding
-import com.example.qunltd.model.HomeModel
-import com.example.qunltd.model.HomeTab
 
 class HomeFragment : Fragment() {
 

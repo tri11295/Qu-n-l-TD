@@ -5,10 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.qunltd.R
 import com.example.qunltd.databinding.FragmentSellBinding
-import com.example.qunltd.ui.home.Receipt
-import com.example.qunltd.ui.home.SellModel
+import com.example.qunltd.model.Customer
+import com.example.qunltd.model.ProductModel
+import com.example.qunltd.model.Receipt
+import com.example.qunltd.model.SellModel
 
 class SellFragment : Fragment() {
 
@@ -25,16 +26,22 @@ class SellFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
-            val listRecipt = listOf(
-                Receipt("ChiA", 1000),
-                Receipt("Chi B", 1235),
-                Receipt("Chi C", 1235)
+            val listProduct = listOf(
+                ProductModel("Vở thuận tiến 1", 10000, 110000, 4, "Thùng"),
+                ProductModel("Vở thuận tiến 2", 10000, 110000, 2, "Thùng"),
+                ProductModel("Vở thuận tiến 3", 10000, 110000, 10, "Thùng"),
+                ProductModel("Vở thuận tiến 4", 10000, 110000, 5, "Thùng"),
+            )
+            val listReceipt = listOf(
+                Receipt(Customer("Chi A"), listProduct),
+                Receipt(Customer("Chi B"), listProduct),
+                Receipt(Customer("Anh C"), listProduct)
             )
             rvSell.adapter = SellAdapter(
                 listOf(
-                    SellModel("17/05/2024", listRecipt),
-                    SellModel("18/05/2024", listRecipt),
-                    SellModel("19/05/2024", listRecipt),
+                    SellModel("17/05/2024", listReceipt),
+                    SellModel("18/05/2024", listReceipt),
+                    SellModel("19/05/2024", listReceipt),
                 )
             )
         }

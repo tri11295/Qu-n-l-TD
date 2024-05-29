@@ -34,6 +34,7 @@
                 android:id="@+id/tvDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/proximanova_sbold"
                 android:text="16/05/2024"
                 android:textColor="@color/curious_blue"
@@ -41,34 +42,35 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTextDate" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvTextSum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/proximanova_bold"
-                android:text="Tổng thu"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/tvSum"
-                app:layout_constraintStart_toStartOf="@+id/tvSum"
-                app:layout_constraintTop_toTopOf="parent" />
+            <!--            <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                android:id="@+id/tvTextSum"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:fontFamily="@font/proximanova_bold"-->
+            <!--                android:text="Tổng thu"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="20sp"-->
+            <!--                app:layout_constraintEnd_toEndOf="@+id/tvSum"-->
+            <!--                app:layout_constraintStart_toStartOf="@+id/tvSum"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvSum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/proximanova_sbold"
-                android:text="100.000.000"
-                android:textColor="@color/curious_blue"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toStartOf="@+id/tvTextCount"
-                app:layout_constraintStart_toEndOf="@+id/tvDate"
-                app:layout_constraintTop_toBottomOf="@+id/tvTextSum" />
+            <!--            <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                android:id="@+id/tvSum"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:fontFamily="@font/proximanova_sbold"-->
+            <!--                android:text="100.000.000"-->
+            <!--                android:textColor="@color/curious_blue"-->
+            <!--                android:textSize="18sp"-->
+            <!--                app:layout_constraintEnd_toStartOf="@+id/tvTextCount"-->
+            <!--                app:layout_constraintStart_toEndOf="@+id/tvDate"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/tvTextSum" />-->
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTextCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
                 android:fontFamily="@font/proximanova_bold"
                 android:text="Số đơn"
                 android:textColor="@color/black"
@@ -78,6 +80,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10"

@@ -1,13 +1,5 @@
 package com.example.qunltd.ui.home
 
-import android.annotation.SuppressLint
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.example.qunltd.R
-import com.example.qunltd.extension.visibleIf
-import com.example.qunltd.model.HomeModel
-
 //class HomeAdapter(private val list: List<HomeModel>, private val onClick: (String) -> Unit) :
 //    RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 //
