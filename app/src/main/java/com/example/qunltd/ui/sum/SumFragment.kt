@@ -1,4 +1,4 @@
-package com.example.qunltd.sum
+package com.example.qunltd.ui.sum
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,7 +22,9 @@ class SumFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
-
+            ivFilter.setOnClickListener {
+                BottomSheetFilterTime().show(childFragmentManager, SumFragment::class.simpleName)
+            }
         }
     }
 

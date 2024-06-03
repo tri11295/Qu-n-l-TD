@@ -1,4 +1,4 @@
-package com.example.qunltd.sum
+package com.example.qunltd.ui.sum
 
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.RecyclerView

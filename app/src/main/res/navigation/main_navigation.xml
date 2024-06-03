@@ -33,6 +33,6 @@
         tools:layout="@layout/fragment_sell" />
     <fragment
         android:id="@+id/sumFragment"
-        android:name="com.example.qunltd.sum.SumFragment"
+        android:name="com.example.qunltd.ui.sum.SumFragment"
         android:label="SumFragment" />
 </navigation>

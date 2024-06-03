@@ -3,4 +3,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Các thuộc tính theme khác -->
     </style>
+    <style name="date_picker_theme" parent="@android:style/Widget.DatePicker">
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+    </style>
 </resources>

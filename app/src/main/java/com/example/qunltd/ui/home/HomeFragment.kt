@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.text.HtmlCompat
 import androidx.navigation.fragment.findNavController
 import com.example.qunltd.databinding.FragmentHomeBinding
 
@@ -23,6 +24,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
+            val htmlText = "<ol><li>Mục 1</li><li>Mục 2</li></ol>"
+            tvText1.text = HtmlCompat.fromHtml(htmlText, HtmlCompat.FROM_HTML_MODE_LEGACY)
+
             homeList.root.setOnClickListener {
                 findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToListProductFragment())
             }

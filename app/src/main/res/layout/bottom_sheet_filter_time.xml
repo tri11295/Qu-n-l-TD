@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_50"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTextFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proximanova_sbold"
+            android:text="Bộ lọc"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/proximanova_reg"
+            android:text="Ngày"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tvTextFilter"
+            app:layout_constraintTop_toBottomOf="@+id/tvTextFilter" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDateStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_date_selected"
+            android:fontFamily="@font/proximanova_reg"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="28/05/2024"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTextDate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proximanova_reg"
+            android:text="Đến"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDateStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvDateStart" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDateEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_date"
+            android:fontFamily="@font/proximanova_reg"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="29/05/2024"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvDateStart" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            style="@style/date_picker_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:calendarTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateStart" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Huỷ"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/btnConfirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConfirm"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Xác nhận"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnCancel"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

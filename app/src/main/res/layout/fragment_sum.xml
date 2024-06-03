@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".sum.SumFragment">
+        tools:context=".ui.sum.SumFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutHeader"
@@ -13,8 +13,7 @@
             android:layout_height="wrap_content"
             android:background="@color/purple_500"
             android:orientation="horizontal"
-            android:paddingHorizontal="5dp"
-            android:paddingVertical="10dp"
+            android:padding="5dp"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -37,7 +36,7 @@
                 android:gravity="center"
                 android:text="Lợi nhuận"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/ivFilter"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -56,15 +55,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
-            tools:listitem="@layout/item_filter">
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/layoutHeader"-->
+        <!--            tools:listitem="@layout/item_filter"/>-->
 
-        </androidx.recyclerview.widget.RecyclerView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
